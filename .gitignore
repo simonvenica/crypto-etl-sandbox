@@ -1,0 +1,12 @@
+# pipeline output
+data/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+
+# local config
+.env

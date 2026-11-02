@@ -1,0 +1,27 @@
+[project]
+name = "crypto-etl-sandbox"
+version = "0.1.0"
+description = "Small practice ETL: CoinGecko top coins into raw/clean/curated Parquet layers"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "requests>=2.31",
+    "pandas>=2.1",
+    "pyarrow>=14",
+    "duckdb>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
